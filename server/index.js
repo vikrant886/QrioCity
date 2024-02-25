@@ -28,7 +28,7 @@ app.get("/hello", (req, res) => {
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
-    origin: 'http://localhost:3000',
+    origin: 'https://qrio-city.vercel.app',
     methods: ['GET', 'POST'],
   },
 });
