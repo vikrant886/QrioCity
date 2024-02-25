@@ -22,7 +22,7 @@ export default function HomeMid() {
     useEffect(() => {
         if (user) {
             axios
-                .post("http://localhost:8080/getuser", { username: user.username })
+                .post(process.env.REACT_APP_SOCKET_URL+"getuser", { username: user.username })
                 .then((res) => {
                     console.log(res);
                     sessionStorage.setItem("userdata", JSON.stringify(res.data.userdata))
